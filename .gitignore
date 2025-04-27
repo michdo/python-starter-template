@@ -1,4 +1,4 @@
-# .gitignore
+# Python
 __pycache__/
 *.pyc
 *.pyo
@@ -7,7 +7,12 @@ __pycache__/
 .venv
 .envrc
 .python-version
-.ipynb_checkpoints/
+
+# Editor
 .vscode/
+.ipynb_checkpoints/
 .cache/
+
+# Build artifacts
 public/
+docs/_build/
