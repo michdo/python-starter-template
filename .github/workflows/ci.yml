@@ -44,6 +44,11 @@ jobs:
       run: |
         .venv/bin/pytest tests/
 
+    - name: Download Mermaid.js
+      run: |
+        mkdir -p docs/_static/js
+        curl -L https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js -o docs/_static/js/mermaid.min.js
+
     - name: Build documentation (Sphinx)
       run: |
         .venv/bin/sphinx-build -b html docs/ public/
