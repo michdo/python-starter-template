@@ -1,0 +1,13 @@
+# .gitignore
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.venv
+.envrc
+.python-version
+.ipynb_checkpoints/
+.vscode/
+.cache/
+public/
