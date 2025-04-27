@@ -1,0 +1,6 @@
+uv
+ruff
+pytest
+sphinx
+sphinxcontrib-mermaid
+marimo
