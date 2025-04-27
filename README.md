@@ -1,6 +1,7 @@
 # Python Starter Template
 
 [![CI](https://github.com/michdo/python-starter-template/actions/workflows/ci.yml/badge.svg)](https://github.com/michdo/python-starter-template/actions/workflows/ci.yml)
+[![Documentation Status](https://img.shields.io/badge/docs-online-success.svg)](https://michdo.github.io/python-starter-template/)
 
 A ready-to-use Python project template with DevContainer setup, GitHub integration, and modern tooling.
 
