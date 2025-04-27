@@ -1,0 +1,55 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+
+    - name: Cache uv and venv
+      id: cache-venv
+      uses: actions/cache@v4
+      with:
+        path: |
+          .venv/
+        key: venv-${{ runner.os }}-${{ hashFiles('requirements.txt') }}
+        restore-keys: |
+          venv-${{ runner.os }}-
+
+    - name: Install uv and set up venv (if cache missed)
+      if: steps.cache-venv.outputs.cache-hit != 'true'
+      run: |
+        pip install uv
+        uv venv
+        uv pip install -r requirements.txt
+
+    - name: Run linter (ruff)
+      run: |
+        .venv/bin/ruff check src/ tests/
+
+    - name: Run tests (pytest)
+      run: |
+        .venv/bin/pytest tests/
+
+    - name: Build documentation (Sphinx)
+      run: |
+        .venv/bin/sphinx-build -b html docs/ public/
+
+    - name: Upload documentation artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: documentation
+        path: public/
