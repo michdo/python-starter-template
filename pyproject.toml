@@ -1,0 +1,50 @@
+[project]
+name = "python-starter-template"
+version = "0.1.0"
+description = "A modern Python starter template with DevContainers, uv, pytest, ruff, sphinx, and CI."
+authors = [
+    { name="Michael Dold", email="micha.dold@gmail.com" }
+]
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.10"
+
+dependencies = [
+    "uv",
+    "ruff",
+    "pytest",
+    "sphinx",
+    "sphinxcontrib-mermaid",
+    "marimo",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest-cov",
+    "pre-commit",
+]
+
+[build-system]
+requires = ["uv"]
+build-backend = "uv.build"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra"
+testpaths = [
+    "tests",
+]
+
+[tool.sphinx]
+builder = "html"
+source-dir = "docs"
+build-dir = "public"
+
+[tool.semantic_release]
+version_variable = [
+    "src/playground/__init__.py:__version__"
+]
