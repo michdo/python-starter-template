@@ -22,6 +22,6 @@ repos:
     hooks:
       - id: pytest-collect
         name: pytest collect-only
-        entry: pytest --collect-only
+        entry: pytest --collect-only tests/
         language: system
         types: [python]
