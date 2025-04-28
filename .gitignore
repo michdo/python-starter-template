@@ -16,3 +16,6 @@ __pycache__/
 # Build artifacts
 public/
 docs/_build/
+
+# uv cache
+.uv/
