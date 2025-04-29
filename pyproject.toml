@@ -22,6 +22,7 @@ dependencies = [
 dev = [
     "pytest-cov",
     "pre-commit",
+    "python-semantic-release >=8.0.0"
 ]
 
 [build-system]
@@ -45,6 +46,6 @@ source-dir = "docs"
 build-dir = "public"
 
 [tool.semantic_release]
-version_variable = [
-    "src/playground/__init__.py:__version__"
-]
+version_variable = "src/playground/__init__.py:__version__"
+upload_to_pypi = false            # change to true when you’re ready to publish
+tag_format = "v{version}"
