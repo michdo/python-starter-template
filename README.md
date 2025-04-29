@@ -26,3 +26,13 @@ A ready-to-use Python project template with DevContainer setup, GitHub integrati
    ```bash
    git clone https://github.com/your-username/python-starter-template.git
    cd python-starter-template
+
+## How Releases Work
+
+1. Merge your PRs to main using Conventional Commits.
+2. On each push to main, CI’s Release workflow runs semantic-release:
+   - It bumps __version__ in your package
+   - It updates CHANGELOG.md
+   - It tags the repo and creates a GitHub Release
+
+3. You don’t need to manually tag or draft releases—just push commits.
