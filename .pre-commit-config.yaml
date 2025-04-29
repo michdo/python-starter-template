@@ -25,3 +25,8 @@ repos:
         entry: pytest --collect-only tests/
         language: system
         types: [python]
+      - id: commitlint
+        name: commitlint (Conventional Commits)
+        entry: commitlint --edit "$1"
+        language: system
+        stages: [commit-msg]

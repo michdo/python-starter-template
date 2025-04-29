@@ -4,6 +4,12 @@ FROM mcr.microsoft.com/devcontainers/python:3.12
 # Switch to root to install global tools
 USER root
 
+# install nodejs (v18.x) and globally install commitlint
+RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && \
+    apt-get update && \
+    apt-get install -y nodejs && \
+    npm install -g @commitlint/cli @commitlint/config-conventional
+
 # Install uv globally
 RUN pip install --upgrade pip \
     && pip install uv
