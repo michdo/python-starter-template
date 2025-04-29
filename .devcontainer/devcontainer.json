@@ -4,7 +4,7 @@
         "dockerfile": "Dockerfile",
         "context": ".."
     },
-    "postCreateCommand": ". .venv/bin/activate && pre-commit install",
+    "postCreateCommand": ". .venv/bin/activate && pre-commit install --hook-type pre-commit --hook-type commit-msg",
     "customizations": {
         "vscode": {
             "extensions": [
