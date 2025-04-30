@@ -29,6 +29,7 @@ jobs:
 
       - name: Build distributions
         run: |
+          source .venv/bin/activate
           python -m build --sdist --wheel
 
       - name: Upload dist artifacts
