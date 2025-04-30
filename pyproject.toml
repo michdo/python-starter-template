@@ -5,7 +5,6 @@ description = "A modern Python starter template with DevContainers, uv, pytest, 
 authors = [
     { name="Michael Dold", email="micha.dold@gmail.com" }
 ]
-repository = "https://github.com/michdo/python-starter-template"
 keywords = ["python","template","devcontainer","ci","semantic-release"]
 readme = "README.md"
 license = { file="LICENSE" }
@@ -20,16 +19,20 @@ dependencies = [
     "marimo",
 ]
 
+[project.urls]
+"Repository" = "https://github.com/michdo/python-starter-template"
+
 [dependency-groups]
 dev = [
     "pytest-cov",
     "pre-commit",
-    "python-semantic-release >=8.0.0"
+    "python-semantic-release >=8.0.0",
+    "build"
 ]
 
 [build-system]
-requires = ["uv"]
-build-backend = "uv.build"
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
 
 [tool.ruff]
 line-length = 100
