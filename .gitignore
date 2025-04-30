@@ -1,21 +1,105 @@
-# Python
+# Byte-compiled / optimized / DLL files
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+build/
+dist/
+downloads/
+eggs/
+.eggs/
+*.egg-info/
+*.egg
+MANIFEST
+pip-wheel-metadata/
+share/python-wheels/
+*.whl
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual environments
 .env
-.venv
-.envrc
-.python-version
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
 
-# Editor
-.vscode/
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*,cover
+.pytest_cache/
+.hypothesis/
+
+# Jupyter Notebook checkpoints
 .ipynb_checkpoints/
-.cache/
 
-# Build artifacts
-public/
+# Mypy, Pyre, Pytype caches
+.mypy_cache/
+.dmypy.json
+.dmypy.json
+.pyre/
+.pytype/
+
+# Ruff cache
+.ruff_cache/
+
+# Sphinx documentation build
 docs/_build/
+public/
+
+# Cookiecutter output
+.cookiecutter/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# JetBrains IDEs
+.idea/
+*.iml
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# macOS / Windows system files
+.DS_Store
+Thumbs.db
+
+# Editor backup / swap files
+*~
+*.swp
+*.swo
+
+# Pip cache
+.cache/pip/
+
+# Direnv
+.envrc
+
+# Docker
+docker-compose.override.yml
+.env.docker
 
 # uv cache
 .uv/
+.cache/uv/
