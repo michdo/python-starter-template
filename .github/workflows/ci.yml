@@ -34,7 +34,7 @@ jobs:
       run: |
         pip install uv
         uv venv
-        uv pip install -r pyproject.toml
+        uv pip install --all-groups
 
     - name: Run linter (ruff)
       run: |
