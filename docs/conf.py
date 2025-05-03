@@ -1,15 +1,10 @@
-import os
-
 # -- Project information -----------------------------------------------------
-
 project = "Python Starter Template"
-copyright = "2025, Michael Dold"
-author = "Michael Dold"
-
+author = "Your Name"
 release = "0.1.0"
+version = release  # display version in the theme
 
 # -- General configuration ---------------------------------------------------
-
 extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.napoleon",
@@ -18,21 +13,30 @@ extensions = [
 ]
 
 templates_path = ["_templates"]
-exclude_patterns = []
+exclude_patterns: list[str] = []
 
 # -- HTML output --------------------------------------------------------------
-
-html_theme = "alabaster"
+html_theme = "furo"
+html_title = project
 html_static_path = ["_static"]
 
-# -- Mermaid configuration ---------------------------------------------------
+html_theme_options = {
+    "sidebar_hide_name": True,
+    "light_logo": "logo-light.svg",
+    "dark_logo": "logo-dark.svg",
+    "source_repository": "https://github.com/michdo/python-starter-template",
+    "source_branch": "main",
+    "source_directory": "docs/",
+    "versions": [
+        ("main", "Latest"),
+        (release, release),
+    ],
+}
 
-if os.getenv("GITHUB_ACTIONS") == "true":
-    # Running in GitHub Actions — prevent sphinxcontrib-mermaid from installing
-    mermaid_output_format = "raw"
-    html_js_files = [
-        "js/mermaid.min.js",
-    ]
-else:
-    # Running locally — allow automatic management
-    mermaid_output_format = "png"
+html_context = {
+    "display_github": True,
+    "github_user": "michdo",
+    "github_repo": "python-starter-template",
+    "github_version": "main",
+    "conf_py_path": "/docs/",
+}
