@@ -1,4 +1,8 @@
-# Add at top if missing
+# -- Project information -----------------------------------------------------
+project = "Python Starter Template"
+author = "Your Name"
+release = "0.1.0"
+version = release  # display version in the theme
 
 # -- General configuration ---------------------------------------------------
 extensions = [
@@ -8,21 +12,27 @@ extensions = [
     "sphinxcontrib.mermaid",
 ]
 
+templates_path = ["_templates"]
+exclude_patterns: list[str] = []
+
 # -- HTML output --------------------------------------------------------------
 html_theme = "furo"
-html_title = "project"
+html_title = project
+html_static_path = ["_static"]
 
-# Enable version switcher on the top bar
 html_theme_options = {
     "sidebar_hide_name": True,
-    "light_logo": "logo-light.svg",  # optional: your logos under _static
+    "light_logo": "logo-light.svg",
     "dark_logo": "logo-dark.svg",
-    "source_repository": "https://github.com/michdo/python-starter-template/",
+    "source_repository": "https://github.com/michdo/python-starter-template",
     "source_branch": "main",
     "source_directory": "docs/",
+    "versions": [
+        ("main", "Latest"),
+        (release, release),
+    ],
 }
 
-# Add “Edit on GitHub” button
 html_context = {
     "display_github": True,
     "github_user": "michdo",
@@ -30,16 +40,3 @@ html_context = {
     "github_version": "main",
     "conf_py_path": "/docs/",
 }
-
-# Add version selector
-html_theme_options.update(
-    {
-        "versions": [
-            ("main", "Latest"),
-            ("v0.1.0", "v0.1.0"),
-        ]
-    }
-)
-
-# Static paths
-html_static_path = ["_static"]
