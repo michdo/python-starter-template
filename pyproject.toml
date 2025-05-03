@@ -28,7 +28,8 @@ dev = [
     "pytest-cov",
     "pre-commit",
     "python-semantic-release >=8.0.0",
-    "build"
+    "build",
+    "furo"
 ]
 
 [build-system]
