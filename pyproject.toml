@@ -7,7 +7,7 @@ authors = [
 ]
 keywords = ["python","template","devcontainer","ci","semantic-release"]
 readme = "README.md"
-license = { file="LICENSE" }
+license = { text = "MIT", file = "LICENSE" }
 requires-python = ">=3.10"
 
 dependencies = [
@@ -21,6 +21,7 @@ dependencies = [
 
 [project.urls]
 "Repository" = "https://github.com/michdo/python-starter-template"
+"Documentation" = "https://michdo.github.io/python-starter-template/"
 
 [dependency-groups]
 dev = [
