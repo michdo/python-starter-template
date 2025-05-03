@@ -30,7 +30,10 @@ dev = [
     "python-semantic-release >=8.0.0",
     "build",
     "furo",
-    "cookiecutter"
+    "cookiecutter",
+    "sphinx-copybutton",
+    "sphinx-panels",
+    "sphinx-tabs",
 ]
 
 [build-system]

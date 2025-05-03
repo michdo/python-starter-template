@@ -10,7 +10,13 @@ extensions = [
     "sphinx.ext.napoleon",
     "sphinx.ext.viewcode",
     "sphinxcontrib.mermaid",
+    "sphinx.ext.autosummary",
+    "sphinx_copybutton",
+    "sphinx_panels",
+    "sphinx_tabs.tabs",
 ]
+
+autosummary_generate = True
 
 templates_path = ["_templates"]
 exclude_patterns: list[str] = []
