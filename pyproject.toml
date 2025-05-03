@@ -3,7 +3,7 @@ name = "python-starter-template"
 version = "0.1.0"
 description = "A modern Python starter template with DevContainers, uv, pytest, ruff, sphinx, and CI."
 authors = [
-    { name="Michael Dold", email="micha.dold@gmail.com" }
+    { name="Michael Dold", email="michael.dold@gmx.net" }
 ]
 keywords = ["python","template","devcontainer","ci","semantic-release"]
 readme = "README.md"
