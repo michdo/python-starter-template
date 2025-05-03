@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <rect x="10" y="10" width="180" height="180" rx="20" ry="20"
+        fill="#FFFFFF" stroke="#4B8BBE" stroke-width="8"/>
+  <text x="100" y="115" text-anchor="middle"
+        font-family="Arial, sans-serif" font-size="72" fill="#306998">PST</text>
+</svg>
