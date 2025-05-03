@@ -1,10 +1,6 @@
 Quickstart
 ==========
 
-.. contents::
-   :local:
-   :depth: 1
-
 Clone & Reopen
 --------------
 
