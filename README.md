@@ -36,3 +36,8 @@ A ready-to-use Python project template with DevContainer setup, GitHub integrati
    - It tags the repo and creates a GitHub Release
 
 3. You don’t need to manually tag or draft releases—just push commits.
+
+# Scaffold a new project
+   ```bash
+   pip install cookiecutter           # if you don’t have it
+   cookiecutter https://github.com/michdo/python-starter-template
