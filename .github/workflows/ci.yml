@@ -34,7 +34,7 @@ jobs:
       run: |
         pip install uv
         uv venv
-        uv pip install --all-groups
+        uv pip install --group dev
 
     - name: Run linter (ruff)
       run: |
