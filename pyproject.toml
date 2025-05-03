@@ -7,7 +7,7 @@ authors = [
 ]
 keywords = ["python","template","devcontainer","ci","semantic-release"]
 readme = "README.md"
-license = { text = "MIT", file = "LICENSE" }
+license = "MIT"
 requires-python = ">=3.10"
 
 dependencies = [
